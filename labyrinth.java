@@ -36,16 +36,19 @@ void solveLabyrith() {
    vor();
 
    while(finishedCounter <= 4) {
-      if(!linksFrei()) {
-         vor();
-      } else {
-         linksUm();
-         vor();
+      while(!finished()) {
+         if(!linksFrei()) {
+            vor();
+         } else {
+            linksUm();
+            vor();
+         }
+
+         if(kornDa()) {
+            nimm();
+         }
       }
 
-      if(kornDa()) {
-         nimm();
-      }
+      finishedCounter++;
    }
-   finishedCounter++;
 }
