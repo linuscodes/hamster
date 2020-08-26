@@ -26,15 +26,16 @@ boolean finished() {
       linksUm();
       frei = vornFrei();
    }
-   
+
    return frei;
 }
 
 // solve labyrinth
 void solveLabyrith() {
+   int finishedCounter = 0;
    vor();
 
-   while(!finished()) {
+   while(finishedCounter <= 4) {
       if(!linksFrei()) {
          vor();
       } else {
@@ -46,4 +47,5 @@ void solveLabyrith() {
          nimm();
       }
    }
+   finishedCounter++;
 }
