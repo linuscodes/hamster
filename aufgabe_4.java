@@ -6,12 +6,14 @@ void main() {
    legeKoerner();
 }
 
+// turn right
 void rechtsUm() {
    linksUm();
    linksUm();
    linksUm();
 }
 
+// move to start position for putting down the corns
 void geheNachOben() {
    linksUm();
    vor();
@@ -28,6 +30,7 @@ void geheNachOben() {
    vor();
 }
 
+// procedure for putting down two corns
 void legeZweiKoerner() {
    rechtsUm();
    vor();
@@ -40,6 +43,7 @@ void legeZweiKoerner() {
    gib();
 }
 
+// procedure for putting down three corns
 void legeDreiKoerner() {
    rechtsUm();
    vor();
@@ -53,6 +57,7 @@ void legeDreiKoerner() {
    gib();
 }
 
+// loop for putting down all corns until the hamster has none left
 void legeKoerner() {
    while(!maulLeer()) {
       legeZweiKoerner();
@@ -60,6 +65,7 @@ void legeKoerner() {
    }
 }
 
+// go upwards and collect all corns
 void erklimmeUndSammle() {
    int anzahlKoerner = 0;
 
