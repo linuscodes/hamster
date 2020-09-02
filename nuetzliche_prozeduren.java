@@ -1,5 +1,10 @@
 void main() {
-
+   sicheresVor();
+   sicheresNimm();
+   sicheresGib();
+   laufeVor();
+   sammle();
+   legAb();
 }
 
 void sicheresVor() {
